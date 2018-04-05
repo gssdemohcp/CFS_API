@@ -1,0 +1,65 @@
+[{
+	"ID": "0080017722",
+	"DeliveryType": "LF",
+	"TransportationDate": "09/04/2014",
+	"DeliveryDate": "14/04/2014",
+	"DeliveryPriority": "01",
+	"NetWeight": "17.000",
+	"WeightUnit": "KG"
+}, {
+	"ID": "0080017676",
+	"DeliveryType": "LF",
+	"TransportationDate": "27/02/2014",
+	"DeliveryDate": "04/03/2014",
+	"DeliveryPriority": "01",
+	"NetWeight": "10.000",
+	"WeightUnit": "KG"
+}, {
+	"ID": "0080017677",
+	"DeliveryType": "LF",
+	"TransportationDate": "27/02/2014",
+	"DeliveryDate": "04/03/2014",
+	"DeliveryPriority": "01",
+	"NetWeight": "150.000",
+	"WeightUnit": "KG"
+}, {
+	"ID": "0080017678",
+	"DeliveryType": "LF",
+	"TransportationDate": "27/02/2014",
+	"DeliveryDate": "04/03/2014",
+	"DeliveryPriority": "01",
+	"NetWeight": "175.000",
+	"WeightUnit": "KG"
+}, {
+	"ID": "0080017679",
+	"DeliveryType": "LF",
+	"TransportationDate": "27/02/2014",
+	"DeliveryDate": "04/03/2014",
+	"DeliveryPriority": "01",
+	"NetWeight": "250.000",
+	"WeightUnit": "KG"
+}, {
+	"ID": "0080017681",
+	"DeliveryType": "LF",
+	"TransportationDate": "27/02/2014",
+	"DeliveryDate": "04/03/2014",
+	"DeliveryPriority": "01",
+	"NetWeight": "150.000",
+	"WeightUnit": "KG"
+}, {
+	"ID": "0080017683",
+	"DeliveryType": "LF",
+	"TransportationDate": "20/02/2014",
+	"DeliveryDate": "25/02/2014",
+	"DeliveryPriority": "01",
+	"NetWeight": "125.000",
+	"WeightUnit": "KG"
+}, {
+	"ID": "0080017632",
+	"DeliveryType": "LF",
+	"TransportationDate": "21/02/2014",
+	"DeliveryDate": "24/02/2014",
+	"DeliveryPriority": "01",
+	"NetWeight": "17.000",
+	"WeightUnit": "KG"
+}]

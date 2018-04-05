@@ -1,0 +1,397 @@
+/* Enter your custom styles here */
+
+.sapMBarChild.sapMImg {
+    height: 90% !important;
+}
+
+.sapMBarChild.sapMText.sapMTextMaxWidth.sapUiSelectable {
+    font-size: large !important;
+}
+
+.CustomerImageLogo.OneByOne.sapMGT.sapMPointer {
+    margin-top: 0.5rem !important;
+    margin-left: 0.5rem !important;
+    height: 20rem !important;
+    width: 14.5rem !important;
+}
+
+.sapMOH.sapMOHBgTransparent {
+    background: #eff4f9 !important;
+}
+
+.sapMOHC.sapMOHBgTransparent {
+    background: #eff4f9 !important;
+}
+
+.sapMFlexBox.sapMFlexBoxAlignContentStretch.sapMFlexBoxAlignItemsStretch.sapMFlexBoxBGTransparent.sapMFlexBoxJustifyStart.sapMFlexBoxWrapNoWrap.sapMHBox {
+    background-color: #eff4f9 !important;
+}
+
+.sapTntSideNavigationVerticalScrolling {
+    background-color: #3f5161 !important;
+}
+
+.sapTntNavLIGroupIcon.sapUiIcon.sapUiIconMirrorInRTL {
+    background-color: #3f5161 !important;
+    color: #cae4fb !important;
+}
+
+.sapTntNavLIGroupIcon.sapUiIcon {
+    background-color: #3f5161 !important;
+    color: #cae4fb !important;
+}
+
+.sapTntNavLIGroup {
+    background-color: #3f5161 !important;
+    color: #cae4fb !important;
+}
+
+.sapTntToolHeader.sapMTB {
+    background-color: #2f3c48 !important;
+}
+
+.sapMBtnContent {
+    color: #cae4fb !important;
+}
+
+.sapUiIcon:before {
+    color: #cae4fb !important;
+}
+
+.sapMBarChild.sapMText {
+    color: #cae4fb !important;
+}
+
+.font {
+    font-size: 11px !important
+}
+
+.sapMSLITitle {
+    font-size: 11px !important;
+}
+
+.sapMSLIDescription {
+    font-size: 11px !important;
+}
+
+.sapMTcInnerMarker.sapSuiteRMC {
+    height: 70% !important;
+}
+
+.sapMListBGSolid.sapMLIB {
+    height: 2rem !important;
+    width: 8rem !important;
+}
+
+.sapMDLILabel {
+    font-size: 10px !important;
+}
+
+.sapMDLIValue {
+    font-size: 10px !important;
+}
+
+#__component0---14806681306277823_S0--searchField-F {
+    width: 10rem !important;
+}
+
+.tableicon {
+    color: black !important;
+}
+
+.sapMTB {
+    background-color: #3f5161 !important;
+}
+
+.chart {
+    color: red !important;
+}
+
+.sapMLIB.sapMNLB.sapMNLI.sapMNLI-LSize {
+    background-color: #afc8dd !important;
+}
+
+.sapMBtnCustomIcon.sapMBtnIcon.sapMBtnIconLeft.sapUiIcon.sapUiIconMirrorInRTL {
+    background-color: #2f3c48 !important;
+}
+
+.OneByOne.sapMGTHdrContent {
+    height: 2rem !important;
+}
+
+.piechart {
+    size: 100% !important;
+}
+
+.searchField {
+    width: 10rem !important;
+}
+
+.page {
+    display: block;
+    margin: 0 auto;
+    background-color: #2a335c !important;
+    margin-top: 1% !important;
+}
+
+.globalimg {
+    display: block;
+    margin: 0 auto !important;
+}
+
+.sapMTitleStyleH2 {
+    font-size: 3.5rem !important;
+    margin-top: 8% !important;
+}
+
+.input1 {
+    display: block;
+    margin: 0 auto !important;
+}
+
+.input2 {
+    display: block;
+    margin: 0 auto !important;
+}
+
+.sapMInputBaseInner {
+    border-radius: 50px !important;
+}
+
+.loginbtn {
+    display: block;
+    margin: 0 auto !important;
+    background-color: #2a335c !important;
+}
+
+.poweredtext {
+    display: block !important;
+    margin: 0 auto !important;
+    margin-top: 10% !important;
+}
+
+.sapVizFrame {
+    margin-top: 0.7rem !important;
+}
+
+.address {
+    margin-left: 445px !important;
+}
+
+.address1 {
+    margin-left: 445px !important;
+}
+
+.abtinfo {
+    margin-left: 1000px !important;
+}
+
+.ContactPerson {
+    height: 20px !important;
+}
+
+.ManagerName {
+    margin-left: 50px !important;
+}
+
+.sapMBtnCustomIcon.sapMBtnIcon.sapMBtnIconLeft.sapUiIcon{
+	background-color: #2f3c48 !important;
+}
+#__component0---login--sap_Responsive_Page_0-content-sap_m_Text-1479723685240 {
+    color: #e6895f !important;
+}
+
+#__text0 {
+    color: #cae4fb !important;
+}
+
+#__content7-content {
+    height: 10rem !important;
+    width: 14rem !important;
+}
+
+#__chart2-bars {
+    width: 12rem !important;
+}
+
+#__content0-content {
+    height: 10rem !important;
+}
+
+#__content6-content {
+    height: 14rem !important;
+}
+
+#__content2 {
+    height: 7rem !important;
+}
+
+#__tile2-content {
+    height: 2rem !important;
+}
+
+#__content3 {
+    height: 10rem !important;
+}
+
+#__content3-icon-image {
+    min-height: 8rem !important;
+}
+
+#__content1-content {
+    height: 10rem !important;
+}
+
+#__content4-content {
+    height: 10rem !important;
+}
+
+#__content5-content {
+    height: 10rem !important;
+}
+
+#__content8-content {
+    height: 10rem !important;
+    width: 10rem !important;
+    margin-left: 2rem !important;
+}
+
+#__content7 {
+    height: 8rem !important;
+}
+
+#__content9 {
+    height: 20% !important;
+}
+
+#__content7-icon-image {
+    height: 8rem !important;
+}
+
+#__content11 {
+    width: 25rem !important;
+}
+
+#__content11-icon-image {
+    width: 25rem !important;
+}
+
+#__content12-content {
+    width: 25rem !important;
+}
+
+#__content9-content {
+    height: 15rem !important;
+    width: 10rem !important;
+}
+
+#__tile3 {
+    height: 18rem !important;
+    width: 14.5rem !important;
+}
+
+#__tile3-content {
+    height: 11rem !important;
+}
+
+#__tile0 {
+    margin-top: 0.5rem !important;
+    margin-left: 0.5rem !important;
+    height: 15rem !important;
+    width: 14.5rem !important;
+}
+
+#__tile0-content.sapMGTContent {
+    height: 12rem !important;
+}
+
+#__content0 {
+    height: 12rem !important;
+}
+
+#__tile1 {
+    width: 14.5rem !important;
+}
+
+#__tile1-content {
+    height: 8rem !important;
+}
+
+#__tile2 {
+    width: 14.5rem !important;
+    height: 10.5rem !important;
+}
+
+#__tile4 {
+    margin-right: 0.5rem !important;
+    height: 10rem !important;
+    width: 14.5rem !important;
+}
+
+#__tile5 {
+    width: 14.5rem !important;
+    height: 8.5rem !important;
+}
+
+#__tile6 {
+    height: 16rem !important;
+    width: 28.5rem !important;
+}
+
+#__tile7 {
+    height: 21.5rem !important;
+    width: 29.5rem !important;
+}
+
+#__tile8 {
+    width: 14.5rem !important;
+    height: 10rem !important;
+}
+
+#__tile9 {
+    width: 29.5rem !important;
+}
+
+#__data24.sapMFlexBoxBGTransparent.sapMFlexItem.sapMFlexItemAlignAuto {
+    min-width: 30rem !important;
+}
+
+#__data23.sapMFlexBoxBGTransparent.sapMFlexItem.sapMFlexItemAlignAuto {
+    min-width: 30rem !important;
+}
+
+#__hbox8 {
+    height: 37rem !important;
+}
+
+#__hbox9 {
+    height: 6rem !important;
+}
+
+@media screen and (orientation:portrait) {
+    #container {
+        -ms-transform: rotate(-90deg);
+        /* IE 9 */
+        -webkit-transform: rotate(-90deg);
+        /* Chrome, Safari, Opera */
+        transform: rotate(-90deg);
+        width: auto/* screen width */
+        ;
+        height: auto/* screen height */
+        ;
+        overflow: scroll;
+    }
+}
+
+.side-navigation-demo {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    max-width: 15rem;
+}

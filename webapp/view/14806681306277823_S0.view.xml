@@ -1,0 +1,178 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="generated.app.controller.14806681306277823_S0" xmlns:micro="sap.suite.ui.microchart"
+	xmlns="sap.m" xmlns:tnt="sap.tnt" xmlns:viz="sap.viz.ui5.controls" xmlns:layout="sap.ui.layout"
+	xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds" xmlns:viz.data="sap.viz.ui5.data">
+	<tnt:ToolPage id="toolPage">
+		<tnt:header>
+			<tnt:ToolHeader>
+				<Button id="sideNavigationToggleButton" icon="sap-icon://menu2" type="Transparent" press="onSideNavButtonPress">
+					<layoutData>
+						<OverflowToolbarLayoutData priority="NeverOverflow"/>
+					</layoutData>
+				</Button>
+				<Button icon="sap-icon://arrow-left" tooltip="Back To Customer" press="handleBackPress"/>
+				<ToolbarSpacer width="338px"/>
+				<Image src='/webapp/image/logo.png'/>
+				<Text text="{i18n>Customer Fact Sheet}" />
+				<tnt:ToolHeaderUtilitySeparator/>
+				<ToolbarSpacer>
+					<layoutData>
+						<OverflowToolbarLayoutData priority="NeverOverflow" minWidth="20px"/>
+					</layoutData>
+				</ToolbarSpacer>
+				<Image src='/webapp/image/Pdf.jpg' tooltip="Click for PDF View" press="handlePdf"/>
+				<Button icon="sap-icon://log" tooltip="Logoff" class="logoff" press="handleLogoffPress"/>
+				<Button text="Alan Smith" type="Transparent" press="handleUserNamePress"/>
+			</tnt:ToolHeader>
+		</tnt:header>
+		<tnt:sideContent>
+			<tnt:SideNavigation expanded="false" itemSelect="onItemSelect" class="side-navigation-demo">
+				<tnt:NavigationList>
+					<tnt:NavigationListItem text="{i18n>homePage}" expanded='true' icon="sap-icon://bbyd-dashboard" select="_onStandardTilePress3"></tnt:NavigationListItem>
+					<tnt:NavigationListItem text="{i18n>Last10Page}" icon="sap-icon://sales-document" select="_onStandardTilePress"></tnt:NavigationListItem>
+					<tnt:NavigationListItem text="{i18n>OTPage}" icon="sap-icon://order-status" select="_onStandardTilePress1"></tnt:NavigationListItem>
+					<!--<tnt:NavigationListItem text="{i18n>SOPage}" icon="sap-icon://sales-order" select="salesOrder"></tnt:NavigationListItem>-->
+					<tnt:NavigationListItem text="{i18n>OQPage}" icon="sap-icon://sales-quote" select="_onStandardTilePress5"></tnt:NavigationListItem>
+					<tnt:NavigationListItem text="{i18n>SalesDocPage}" icon="sap-icon://inspection" select="_onStandardTilePress2"></tnt:NavigationListItem>
+					<tnt:NavigationListItem text="{i18n>DeliveryPage}" icon="sap-icon://shipping-status" select="_onStandardTilePress6"></tnt:NavigationListItem>
+					<tnt:NavigationListItem text="{i18n>BillingDocPage}" icon="sap-icon://sales-order" select="_onStandardTilePress9"></tnt:NavigationListItem>
+					<tnt:NavigationListItem text="{i18n>OBDPage}" icon="sap-icon://employee-approvals" select="_onStandardTilePress10"></tnt:NavigationListItem>
+					<tnt:NavigationListItem text="{i18n>SalesDocBillPage}" icon="sap-icon://employee-rejections" select="_onStandardTilePress8"></tnt:NavigationListItem>
+					<tnt:NavigationListItem text="{i18n>contactPage}" icon="sap-icon://customer-and-contacts" select="_onStandardTilePress7"></tnt:NavigationListItem>
+				</tnt:NavigationList>
+			</tnt:SideNavigation>
+		</tnt:sideContent>
+		<tnt:mainContents>
+			<NavContainer id="pageContainer">
+				<pages>
+					<ScrollContainer id="root1" horizontal="false" vertical="true" height="100%">
+						<HBox height="100%">
+							<VBox height="38rem">
+								<HBox>
+									<GenericTile class="tile0" header="Last 10 Sales Document" press="_onStandardTilePress">
+										<tileContent>
+											<TileContent >
+												<content>
+													<List id="Last10List" items="{/last10set}" growing="true" growingThreshold="4" growingScrollToLoad="false">
+													<DisplayListItem label="{Vbeln}" value="{Auart}"/>
+													</List>
+												</content>
+											</TileContent>
+										</tileContent>
+									</GenericTile>
+								</HBox>
+								<HBox>
+									<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Open Quotations" frameType="OneByOne"
+										press="_onStandardTilePress5">
+										<tileContent>
+											<TileContent>
+												<content>
+													<micro:RadialMicroChart id="openQuotations" valueColor="Neutral"/>
+												</content>
+											</TileContent>
+										</tileContent>
+									</GenericTile>
+								</HBox>
+								<HBox>
+									<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Contact Person" frameType="TwoThirds"
+										press="_onStandardTilePress7">
+										<tileContent>
+											<TileContent>
+												<content>
+													<Link id="ContactPerson" text="{/cpset/0/Namev} {/cpset/0/Name1} - {/cpset/0/SmtpAddr}" press="handleLinkPress"/>
+												</content>
+											</TileContent>
+										</tileContent>
+									</GenericTile>
+								</HBox>
+							</VBox>
+							<VBox height="38rem">
+								<HBox>
+									<GenericTile class="CustomerImageLogo" header="Jessica D. Prince - Customer" frameType="OneByOne" press="press">
+										<tileContent>
+											<TileContent>
+												<content>
+													<ImageContent description="Prince - Customer" src="/webapp/image/cust.png"/>
+												</content>
+											</TileContent>
+										</tileContent>
+									</GenericTile>
+								</HBox>
+								<HBox height="10rem">
+									<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Deliveries" frameType="TwoThirds"
+										press="_onStandardTilePress6">
+										<tileContent>
+											<TileContent>
+												<content>
+													<NumericContent id="Deliveries" value="{/delvyset/length}" icon="sap-icon://shipping-status"/>
+												</content>
+											</TileContent>
+										</tileContent>
+									</GenericTile>
+								</HBox>
+								<HBox>
+									<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Sales Documents Search" frameType="OneByOne">
+										<tileContent>
+											<TileContent >
+												<content>
+													<SearchField id="searchField" class="searchField" placeholder="SD No" value="{ui>/globalFilter}" search="filterGlobally"/>
+												</content>
+											</TileContent>
+										</tileContent>
+									</GenericTile>
+								</HBox>
+							</VBox>
+							<VBox height="38rem">
+								<HBox>
+									<layout:FixFlex id='chartFixFlex' minFlexSize="250">
+										<layout:flexContent>
+											<viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}"
+												vizProperties="{ title: {text : 'Analytics for Open Billing Document', visible : true}}" height="16rem" width="30rem" vizType='column'>
+												<viz:dataset>
+													<viz.data:FlattenedDataset data="{/OpenBillSet}">
+														<viz.data:dimensions>
+															<viz.data:DimensionDefinition name="Billing Doc No" value="{Vbeln}"/>
+														</viz.data:dimensions>
+														<viz.data:measures>
+															<viz.data:MeasureDefinition name="Net Value" value="{Netwr}"/>
+														</viz.data:measures>
+													</viz.data:FlattenedDataset>
+												</viz:dataset>
+												<viz:feeds>
+													<viz.feeds:FeedItem uid="valueAxis" type="Measure" values="Net Value"/>
+													<viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="Billing Doc No"/>
+												</viz:feeds>
+											</viz:VizFrame>
+										</layout:flexContent>
+									</layout:FixFlex>
+								</HBox>
+								<HBox>
+									<layout:FixFlex id='chartFixFlex2' minFlexSize="250">
+										<layout:flexContent>
+											<viz:VizFrame id="idpiechart2" uiConfig="{applicationSet:'fiori'}"
+												vizProperties="{ title: {text : 'Analytics for Order Tracking', visible : true}}" height="19rem" width="30rem" vizType='pie'>
+												<viz:dataset>
+													<viz.data:FlattenedDataset data="{/OTSet}">
+														<viz.data:dimensions>
+															<viz.data:DimensionDefinition name="Created No" value="{ path:'Erdat', formatter: '.formatDate'}"/>
+														</viz.data:dimensions>
+														<viz.data:measures>
+															<viz.data:MeasureDefinition name="Net Value" value="{Netwr}"/>
+														</viz.data:measures>
+													</viz.data:FlattenedDataset>
+												</viz:dataset>
+												<viz:feeds>
+													<viz.feeds:FeedItem uid="size" type="Measure" values="Net Value"/>
+													<viz.feeds:FeedItem uid="color" type="Dimension" values="Created No"/>
+												</viz:feeds>
+											</viz:VizFrame>
+										</layout:flexContent>
+									</layout:FixFlex>
+								</HBox>
+							</VBox>
+						</HBox>
+					</ScrollContainer>
+				</pages>
+			</NavContainer>
+		</tnt:mainContents>
+	</tnt:ToolPage>
+</mvc:View>

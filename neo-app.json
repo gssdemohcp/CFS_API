@@ -1,0 +1,66 @@
+{
+  "welcomeFile": "webapp/index.html",
+  "routes": [
+    {
+      "path": "/resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "preferLocal": true,
+        "entryPath": "/resources"
+      },
+      "description": "SAPUI5 Resources"
+    },
+    {
+      "path": "/sap/opu/odata",
+      "target": {
+        "type": "destination",
+        "name": "EIH",
+        "entryPath": "/sap/opu/odata"
+      },
+      "description": "EIH System"
+    },
+    {
+      "path": "/p1942219772trial",
+      "target": {
+        "type": "destination",
+        "name": "API_Management_Endpoint_Trial",
+        "entryPath": "/p1942219772trial"
+      },
+      "description": "B – API Management – runtime – endpoint – trial"
+    },
+    {
+      "path": "/test-resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/test-resources"
+      },
+      "description": "SAPUI5 Test Resources"
+    },
+    {
+      "path": "/EIH",
+      "target": {
+        "type": "destination",
+        "name": "EIH"
+      },
+      "description": "EIH"
+    }
+  ],
+  "cacheControl": [
+    {
+      "directive": "private",
+      "maxAge": 0,
+      "path": "**.html"
+    },
+    {
+      "directive": "private",
+      "maxAge": 0,
+      "path": "sap-ui-cachebuster-info.json"
+    },
+    {
+      "directive": "public",
+      "maxAge": 31536000
+    }
+  ]
+}

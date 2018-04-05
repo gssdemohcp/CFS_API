@@ -1,0 +1,35 @@
+{
+    "application": {
+        "id": "",
+        "title": "generated.app.CFS-API",
+        "description": "cfs",
+        "type": "SAP_UI5_Component",
+        "componentUrl": "/webapp",
+        "appUrl": "#CFSAPI-Display",
+        "navigationComponentName": "generated.app",
+        "intentSemanticObject": "CFS-API",
+        "intentAction": "Display",
+        "html5ApplicationName": "cfsapi",
+        "HCPParentApplicationName": ""
+    },
+    "assignment": {
+        "groups": [
+            "42e74684-4faa-49f2-84c1-867262a7f756"
+        ],
+        "contentPackages": [
+            "024f6db0-344b-48de-af13-0101819a4975"
+        ],
+        "categories": []
+    },
+    "tile": {
+        "type": "StaticTile",
+        "title": "csf",
+        "subtitle": "",
+        "searchKeywords": "csf,",
+        "displayIconUrl": "sap-icon://approvals",
+        "displayInfoText": "",
+        "size": "1x1",
+        "serviceURL": "",
+        "refreshInterval": ""
+    }
+}

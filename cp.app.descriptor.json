@@ -1,0 +1,10 @@
+[
+	{
+		"id": "hcp://cfsapi/webapp/manifest.json",
+		"_entityType": "PORTAL_SITE_V2_TEMPLATE_APP_CONFIG",
+		"path": "webapp",
+		"name": "CFS Catalog",
+		"thumbnail": "sap-icon://customer-financial-fact-sheet",
+		"preview": ""
+	}
+]

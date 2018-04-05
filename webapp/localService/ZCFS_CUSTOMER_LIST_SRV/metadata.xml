@@ -1,0 +1,334 @@
+<edmx:Edmx
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+    xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+    <edmx:Reference
+        xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Uri="./sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1"/>
+    </edmx:Reference>
+    <edmx:Reference
+        xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Uri="./sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CORE',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Core.V1"/>
+    </edmx:Reference>
+    <edmx:Reference
+        xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Uri="./sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZCFS_CUSTOMER_LIST_SRV" xml:lang="en" sap:schema-version="1">
+            <EntityType Name="ZCFS_Cust" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Kunnr"/>
+                </Key>
+                <Property Name="EmployeeResponsible" Type="Edm.String" Nullable="false" MaxLength="8" sap:label="Personnel No."/>
+                <Property Name="Kunnr" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Customer"/>
+                <Property Name="Name1" Type="Edm.String" Nullable="false" MaxLength="35" sap:label="Name"/>
+                <Property Name="Ort01" Type="Edm.String" Nullable="false" MaxLength="35" sap:label="City"/>
+                <Property Name="Pstlz" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Postal Code"/>
+                <Property Name="Regio" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Region"/>
+                <Property Name="Stras" Type="Edm.String" Nullable="false" MaxLength="35" sap:label="Street"/>
+                <Property Name="Telf1" Type="Edm.String" Nullable="false" MaxLength="16" sap:label="Telephone 1"/>
+                <Property Name="Telfx" Type="Edm.String" Nullable="false" MaxLength="31" sap:label="Fax Number"/>
+            </EntityType>
+            <EntityContainer Name="ZCFS_CUSTOMER_LIST_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ZCFS_CustSet" EntityType="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust" sap:content-version="1"/>
+            </EntityContainer>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust/EmployeeResponsible">
+                <Annotation Term="com.sap.vocabularies.UI.v1.DisplayTimeZone" Bool="false"/>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust/EmployeeResponsible">
+                <Annotation Term="com.sap.vocabularies.UI.v1.IsImageURL" Bool="false"/>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust/EmployeeResponsible">
+                <Annotation Term="com.sap.vocabularies.UI.v1.MultiLineText" Bool="false"/>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust/Kunnr">
+                <Annotation Term="com.sap.vocabularies.UI.v1.DisplayTimeZone" Bool="false"/>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust/Kunnr">
+                <Annotation Term="com.sap.vocabularies.UI.v1.IsImageURL" Bool="false"/>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust/Kunnr">
+                <Annotation Term="com.sap.vocabularies.UI.v1.MultiLineText" Bool="false"/>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust/Name1">
+                <Annotation Term="com.sap.vocabularies.UI.v1.DisplayTimeZone" Bool="false"/>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust/Name1">
+                <Annotation Term="com.sap.vocabularies.UI.v1.IsImageURL" Bool="false"/>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust/Name1">
+                <Annotation Term="com.sap.vocabularies.UI.v1.MultiLineText" Bool="false"/>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust/Ort01">
+                <Annotation Term="com.sap.vocabularies.UI.v1.DisplayTimeZone" Bool="false"/>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust/Ort01">
+                <Annotation Term="com.sap.vocabularies.UI.v1.IsImageURL" Bool="false"/>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust/Ort01">
+                <Annotation Term="com.sap.vocabularies.UI.v1.MultiLineText" Bool="false"/>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust/Pstlz">
+                <Annotation Term="com.sap.vocabularies.UI.v1.DisplayTimeZone" Bool="false"/>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust/Pstlz">
+                <Annotation Term="com.sap.vocabularies.UI.v1.IsImageURL" Bool="false"/>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust/Pstlz">
+                <Annotation Term="com.sap.vocabularies.UI.v1.MultiLineText" Bool="false"/>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust/Regio">
+                <Annotation Term="com.sap.vocabularies.UI.v1.DisplayTimeZone" Bool="false"/>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust/Regio">
+                <Annotation Term="com.sap.vocabularies.UI.v1.IsImageURL" Bool="false"/>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust/Regio">
+                <Annotation Term="com.sap.vocabularies.UI.v1.MultiLineText" Bool="false"/>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust/Stras">
+                <Annotation Term="com.sap.vocabularies.UI.v1.DisplayTimeZone" Bool="false"/>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust/Stras">
+                <Annotation Term="com.sap.vocabularies.UI.v1.IsImageURL" Bool="false"/>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust/Stras">
+                <Annotation Term="com.sap.vocabularies.UI.v1.MultiLineText" Bool="false"/>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust/Telf1">
+                <Annotation Term="com.sap.vocabularies.UI.v1.DisplayTimeZone" Bool="false"/>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust/Telf1">
+                <Annotation Term="com.sap.vocabularies.UI.v1.IsImageURL" Bool="false"/>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust/Telf1">
+                <Annotation Term="com.sap.vocabularies.UI.v1.MultiLineText" Bool="false"/>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust/Telfx">
+                <Annotation Term="com.sap.vocabularies.UI.v1.DisplayTimeZone" Bool="false"/>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust/Telfx">
+                <Annotation Term="com.sap.vocabularies.UI.v1.IsImageURL" Bool="false"/>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust/Telfx">
+                <Annotation Term="com.sap.vocabularies.UI.v1.MultiLineText" Bool="false"/>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust">
+                <Annotation Term="com.sap.vocabularies.UI.v1.Contacts">
+                    <Collection/>
+                </Annotation>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust">
+                <Annotation Term="com.sap.vocabularies.UI.v1.Facets">
+                    <Collection/>
+                </Annotation>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust">
+                <Annotation Term="com.sap.vocabularies.UI.v1.GeoLocations">
+                    <Collection/>
+                </Annotation>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust">
+                <Annotation Term="com.sap.vocabularies.UI.v1.GeoPoints">
+                    <Collection/>
+                </Annotation>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust">
+                <Annotation Term="com.sap.vocabularies.UI.v1.Identification">
+                    <Collection/>
+                </Annotation>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust">
+                <Annotation Term="com.sap.vocabularies.UI.v1.LineItem">
+                    <Collection/>
+                </Annotation>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust">
+                <Annotation Term="com.sap.vocabularies.UI.v1.StatusInfo">
+                    <Collection/>
+                </Annotation>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust">
+                <Annotation Term="com.sap.vocabularies.UI.v1.Badge">
+                    <Record Type="com.sap.vocabularies.UI.v1.BadgeType">
+                        <PropertyValue Property="HeadLine">
+                            <Record Type="com.sap.vocabularies.UI.v1.DataField">
+                                <PropertyValue Property="Label" String=""/>
+                                <PropertyValue Property="Title">
+                                    <Record Type="com.sap.vocabularies.UI.v1.DataField">
+                                        <PropertyValue Property="Label" String=""/>
+                                        <PropertyValue Property="ImageUrl" String=""/>
+                                        <PropertyValue Property="TypeImageUrl" String=""/>
+                                        <PropertyValue Property="MainInfo">
+                                            <Record Type="com.sap.vocabularies.UI.v1.DataField">
+                                                <PropertyValue Property="Label" String=""/>
+                                                <PropertyValue Property="SecondaryInfo">
+                                                    <Record Type="com.sap.vocabularies.UI.v1.DataField">
+                                                        <PropertyValue Property="Label" String=""/>
+                                                    </Record>
+                                                </PropertyValue>
+                                            </Record>
+                                        </PropertyValue>
+                                    </Record>
+                                </PropertyValue>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust">
+                <Annotation Term="com.sap.vocabularies.UI.v1.Chart">
+                    <Record Type="com.sap.vocabularies.UI.v1.ChartDefinitionType">
+                        <PropertyValue Property="Title" String=""/>
+                        <PropertyValue Property="Description" String=""/>
+                        <PropertyValue Property="ChartType" EnumMember=""/>
+                        <PropertyValue Property="Measures">
+                            <Collection/>
+                        </PropertyValue>
+                        <PropertyValue Property="Dimensions">
+                            <Collection/>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust">
+                <Annotation Term="com.sap.vocabularies.UI.v1.DataPoint">
+                    <Record Type="com.sap.vocabularies.UI.v1.DataPointType">
+                        <PropertyValue Property="Title" String=""/>
+                        <PropertyValue Property="Description" String=""/>
+                        <PropertyValue Property="LongDescription" String=""/>
+                        <PropertyValue Property="ValueFormat">
+                            <Record Type="com.sap.vocabularies.UI.v1.NumberFormat">
+                                <PropertyValue Property="ReferencePeriod">
+                                    <Record Type="com.sap.vocabularies.UI.v1.ReferencePeriod">
+                                        <PropertyValue Property="Description" String=""/>
+                                        <PropertyValue Property="Criticality" EnumMember=""/>
+                                        <PropertyValue Property="CriticalityCalculation">
+                                            <Record Type="com.sap.vocabularies.UI.v1.CriticalityCalculationType">
+                                                <PropertyValue Property="ImprovementDirection" EnumMember=""/>
+                                                <PropertyValue Property="Trend" EnumMember=""/>
+                                                <PropertyValue Property="TrendCalculation">
+                                                    <Record Type="com.sap.vocabularies.UI.v1.TrendCalculationType">
+                                                        <PropertyValue Property="IsRelativeDifference" Bool="false"/>
+                                                    </Record>
+                                                </PropertyValue>
+                                            </Record>
+                                        </PropertyValue>
+                                    </Record>
+                                </PropertyValue>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust">
+                <Annotation Term="com.sap.vocabularies.UI.v1.FieldGroup">
+                    <Record Type="com.sap.vocabularies.UI.v1.FieldGroupType">
+                        <PropertyValue Property="Label" String=""/>
+                        <PropertyValue Property="Data">
+                            <Collection/>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust">
+                <Annotation Term="com.sap.vocabularies.UI.v1.GeoLocation">
+                    <Record Type="com.sap.vocabularies.UI.v1.GeoLocationType"/>
+                </Annotation>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust">
+                <Annotation Term="com.sap.vocabularies.UI.v1.HeaderInfo">
+                    <Record Type="com.sap.vocabularies.UI.v1.HeaderInfoType">
+                        <PropertyValue Property="TypeName" String=""/>
+                        <PropertyValue Property="TypeNamePlural" String=""/>
+                        <PropertyValue Property="TypeImageUrl" String=""/>
+                        <PropertyValue Property="Title">
+                            <Record Type="com.sap.vocabularies.UI.v1.DataField">
+                                <PropertyValue Property="Label" String=""/>
+                                <PropertyValue Property="Description">
+                                    <Record Type="com.sap.vocabularies.UI.v1.DataField">
+                                        <PropertyValue Property="Label" String=""/>
+                                        <PropertyValue Property="ImageUrl" String=""/>
+                                    </Record>
+                                </PropertyValue>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZCFS_CUSTOMER_LIST_SRV.ZCFS_Cust">
+                <Annotation Term="com.sap.vocabularies.UI.v1.MediaResource">
+                    <Record Type="com.sap.vocabularies.UI.v1.MediaResourceType">
+                        <PropertyValue Property="Url" String=""/>
+                        <PropertyValue Property="ContentType" String=""/>
+                        <PropertyValue Property="ByteSize" Int="0"/>
+                        <PropertyValue Property="Thumbnail">
+                            <Record Type="com.sap.vocabularies.UI.v1.ImageType">
+                                <PropertyValue Property="Url" String=""/>
+                                <PropertyValue Property="Width" String=""/>
+                                <PropertyValue Property="Height" String=""/>
+                                <PropertyValue Property="Title">
+                                    <Record Type="com.sap.vocabularies.UI.v1.DataField">
+                                        <PropertyValue Property="Label" String=""/>
+                                        <PropertyValue Property="Description">
+                                            <Record Type="com.sap.vocabularies.UI.v1.DataField">
+                                                <PropertyValue Property="Label" String=""/>
+                                            </Record>
+                                        </PropertyValue>
+                                    </Record>
+                                </PropertyValue>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <atom:link
+                xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="./sap/opu/odata/SAP/ZCFS_CUSTOMER_LIST_SRV/$metadata"/>
+                <atom:link
+                    xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="./sap/opu/odata/SAP/ZCFS_CUSTOMER_LIST_SRV/$metadata"/>
+                </Schema>
+            </edmx:DataServices>
+        </edmx:Edmx>

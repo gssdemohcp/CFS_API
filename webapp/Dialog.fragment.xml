@@ -1,0 +1,20 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<SelectDialog
+		title="Select fields"
+		search="handleSearch"
+		confirm="handleClose"
+		close="handleClose"
+		items="{
+			path: '/d/results'
+		}" >
+		<StandardListItem
+			title="{Stext}"
+			description=""
+			icon=""
+			iconDensityAware="false"
+			iconInset="false"
+			type="Active" />
+	</SelectDialog>
+</core:FragmentDefinition>

@@ -1,0 +1,38 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="generated.app.controller.Customer" xmlns="sap.m"
+	xmlns:smartFilterBar="sap.ui.comp.smartfilterbar" xmlns:smartTable="sap.ui.comp.smarttable" xmlns:core="sap.ui.core"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:tnt="sap.tnt" xmlns:layout="sap.ui.layout">
+	<!--<Page title="{i18n>title}" class="sapUiContentPadding" showNavButton="false" enableScrolling="false">-->
+	<Toolbar>
+		<Button icon="sap-icon://arrow-left" tooltip="Back To Customer" press="handleBackPress"/>
+		<ToolbarSpacer width="338px"/>
+		<Image src="/webapp/image/logo.png"/>
+		<Text class="sapUiResponsiveMargin" text="Customer Details"/>
+		<ToolbarSpacer>
+			<layoutData>
+				<OverflowToolbarLayoutData priority="NeverOverflow" minWidth="20px"/>
+			</layoutData>
+		</ToolbarSpacer>
+		<Button icon="sap-icon://log" tooltip="Logoff" class="logoff" press="handleLogoffPress"/>
+		<Button text="Alan Smith" type="Transparent" press="handleUserNamePress"/>
+	</Toolbar>
+	<VBox fitContainer="true">
+		<smartTable:SmartTable id="SmartTable" entitySet="ZCFS_CustSet" smartFilterId="smartFilterBar" tableType="Table" useExportToExcel="true"
+			useVariantManagement="false" useTablePersonalisation="true" header="Customers" showRowCount="true"
+			persistencyKey="SmartTableAnalytical_Explored" enableAutoBinding="true" app:useSmartField="true" class="sapUiResponsiveContentPadding"
+			initiallyVisibleFields="Kunnr,Name1,Ort01,OpQuotCount,OpDelCount" showFullScreenButton="true">
+			<smartTable:layoutData>
+				<FlexItemData growFactor="1" baseSize="0%"/>
+			</smartTable:layoutData>
+			<Table growing="true" growingDirection="Downwards" growingScrollToLoad="true">
+				<columns>
+				</columns>
+				<items>
+					<ColumnListItem type="Navigation" press="navigate">
+						<cells>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</smartTable:SmartTable>
+	</VBox>
+</mvc:View>

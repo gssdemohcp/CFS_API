@@ -1,0 +1,172 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="generated.app.controller.SalesOrder" xmlns:m="sap.m" xmlns="sap.ui.table"
+	xmlns:c="sap.ui.core" xmlns:tnt="sap.tnt" xmlns:html="http://www.w3.org/1999/xhtml">
+	<tnt:ToolPage id="toolPage">
+		<tnt:header>
+			<tnt:ToolHeader>
+				<m:Button id="sideNavigationToggleButton" icon="sap-icon://menu2" type="Transparent" press="onSideNavButtonPress">
+					<m:layoutData>
+						<m:OverflowToolbarLayoutData priority="NeverOverflow"/>
+					</m:layoutData>
+				</m:Button>
+				<m:Button icon="sap-icon://arrow-left" tooltip="Back To Customer" press="handleBackPress"/>
+				<m:ToolbarSpacer width="338px"/>
+				<m:Image src='/webapp/image/logo.png'/>
+				<m:Text text="{i18n>SOPage}"/>
+				<tnt:ToolHeaderUtilitySeparator/>
+				<m:ToolbarSpacer>
+					<m:layoutData>
+						<m:OverflowToolbarLayoutData priority="NeverOverflow" minWidth="20px"/>
+					</m:layoutData>
+				</m:ToolbarSpacer>
+				<m:Button icon="sap-icon://log" tooltip="Logoff" class="logoff" press="handleLogoffPress"/>
+				<m:Button text="Alan Smith" type="Transparent">
+					<m:layoutData>
+						<m:OverflowToolbarLayoutData priority="NeverOverflow"/>
+					</m:layoutData>
+				</m:Button>
+			</tnt:ToolHeader>
+		</tnt:header>
+		<tnt:sideContent>
+			<tnt:SideNavigation expanded="false" itemSelect="onItemSelect" class="side-navigation-demo">
+				<tnt:NavigationList>
+					<tnt:NavigationListItem text="{i18n>homePage}" expanded='true' icon="sap-icon://bbyd-dashboard" select="_onStandardTilePress3"></tnt:NavigationListItem>
+					<tnt:NavigationListItem text="{i18n>Last10Page}" icon="sap-icon://sales-document" select="_onStandardTilePress"></tnt:NavigationListItem>
+					<tnt:NavigationListItem text="{i18n>OTPage}" icon="sap-icon://order-status" select="_onStandardTilePress1"></tnt:NavigationListItem>
+					<tnt:NavigationListItem text="{i18n>SOPage}" icon="sap-icon://sales-order" select="salesOrder"></tnt:NavigationListItem>
+					<tnt:NavigationListItem text="{i18n>OQPage}" icon="sap-icon://sales-quote" select="_onStandardTilePress5"></tnt:NavigationListItem>
+					<tnt:NavigationListItem text="{i18n>SalesDocPage}" icon="sap-icon://inspection" select="_onStandardTilePress2"></tnt:NavigationListItem>
+					<tnt:NavigationListItem text="{i18n>DeliveryPage}" icon="sap-icon://shipping-status" select="_onStandardTilePress6"></tnt:NavigationListItem>
+					<tnt:NavigationListItem text="{i18n>BillingDocPage}" icon="sap-icon://sales-order" select="_onStandardTilePress9"></tnt:NavigationListItem>
+					<tnt:NavigationListItem text="{i18n>OBDPage}" icon="sap-icon://employee-approvals" select="_onStandardTilePress10"></tnt:NavigationListItem>
+					<tnt:NavigationListItem text="{i18n>SalesDocBillPage}" icon="sap-icon://employee-rejections" select="_onStandardTilePress8"></tnt:NavigationListItem>
+					<tnt:NavigationListItem text="{i18n>contactPage}" icon="sap-icon://customer-and-contacts" select="_onStandardTilePress7"></tnt:NavigationListItem>
+				</tnt:NavigationList>
+			</tnt:SideNavigation>
+		</tnt:sideContent>
+		<tnt:mainContents>
+			<m:NavContainer id="pageContainer">
+				<m:pages>
+					<m:ScrollContainer id="root1" horizontal="false" vertical="true" height="100%">
+						<m:HBox>
+							<m:VBox>
+								<m:Image class="sapUiTinyMarginTopBottom sapUiTinyMarginBegin" src="/webapp/image/cust.png"/>
+							</m:VBox>
+							<m:VBox>
+								<m:Text class="sapUiTinyMarginTopBottom sapUiTinyMarginBegin" text="Classification Number:06 Industry:MBAU" state=""/>
+								<m:Text class="sapUiTinyMarginBottom sapUiTinyMarginBegin" text="Key Figure's Annual Sales: 0,00 in 0000" state=""/>
+							</m:VBox>
+							<m:VBox>
+								<m:Text class="address sapUiTinyMarginTopBottom" id="Address" title=""
+									text="House No/Street:{/Address/0/HOUSE_NO-STREET} City:{/Address/0/CITY}"/>
+								<m:Text class="address1 sapUiTinyMarginBottom" id="Address1" title="" text="Region:{/Address/0/REGION} Postal Code:{/Address/0/POSTALCODE}"/>
+							</m:VBox>
+						</m:HBox>
+						<m:content>
+							<Table id="table" rows="{/OpenSalesOrder}" selectionMode="Single" mode="None" visibleRowCount="{/OpenSalesOrder/length}" inset="false"
+								ariaLabelledBy="title">
+								<toolbar>
+									<m:Toolbar>
+										<m:content>
+											<m:Title id="title"/>
+											<m:ToolbarSpacer/>
+											<m:Button id="column" icon="sap-icon://action-settings" tooltip="show/hide columns" press="getcolumn">
+												<m:customData>
+													<c:CustomData key="multi" value="true"/>
+													<c:CustomData key="remember" value="true"/>
+												</m:customData>
+											</m:Button>
+											<m:Button icon="sap-icon://complete" tooltip="Show Status of 'Not yet processed' only" press="getTAonly"/>
+											<m:Button icon="sap-icon://pdf-reader" tooltip="Click for PDF View" press="handlePdf"/>
+											<m:Button icon="sap-icon://decline" tooltip="clear selection/sort/filter" press="clearSelection"/>
+											<m:SearchField id="searchField" class="searchFiled" placeholder="Sales Doc" value="{ui>/globalFilter}" search="filterGlobally" width="16rem"/>
+										</m:content>
+									</m:Toolbar>
+								</toolbar>
+								<columns>
+									<Column width="auto" filterProperty="ERDAT" defaultFilterOperator="EQ" sortProperty="ERDAT" tooltip="Created On">
+										<m:Label text="{i18n>createddatecolumnTitle}"/>
+										<template>
+											<m:Text text="{ERDAT}"/>
+										</template>
+									</Column>
+									<Column width="auto" sortProperty="VBELN" tooltip="Sales Order">
+										<m:Label text="{i18n>salesorderTitle}"/>
+										<template>
+											<m:Text text="{VBELN}"/>
+										</template>
+									</Column>
+									<Column width="auto" filterProperty="KUNNR" defaultFilterOperator="EQ" sortProperty="KUNNR" tooltip="Sold To Party" visible="false">
+										<m:Label text="{i18n>stpidcolumnTitle}"/>
+										<template>
+											<m:Text text="{KUNNR}"/>
+										</template>
+									</Column>
+									<Column width="auto" filterProperty="MATNR" defaultFilterOperator="EQ" sortProperty="MATNR" tooltip="Material">
+										<m:Label text="{i18n>matTitle}"/>
+										<template>
+											<m:Text text="{MATNR}"/>
+										</template>
+									</Column>
+									<Column width="auto" filterProperty="ABSTK" defaultFilterOperator="EQ" sortProperty="ABSTK" tooltip="Rejection Status" visible="false">
+										<m:Label text="{i18n>rejstTitle}"/>
+										<template>
+											<m:Text text="{ABSTK}"/>
+										</template>
+									</Column>
+									<Column width="auto" filterProperty="ABGRU" defaultFilterOperator="EQ" sortProperty="ABGRU" tooltip="Reason For Rejection" visible="false">
+										<m:Label text="{i18n>rejrsnTitle}"/>
+										<template>
+											<m:Text text="{ABGRU}"/>
+										</template>
+									</Column>
+									<Column width="auto" filterProperty="FAKSK" defaultFilterOperator="EQ" sortProperty="FAKSK" tooltip="Billing Block" visible="false">
+										<m:Label text="Billing Block"/>
+										<template>
+											<m:Text text="{FAKSK}"/>
+										</template>
+									</Column>
+									<Column width="auto" filterProperty="LIFSK" defaultFilterOperator="EQ" sortProperty="LIFSK" tooltip="Delivery Block For Item" visible="false">
+										<m:Label text="{i18n>dvyblkTitle}"/>
+										<template>
+											<m:Text text="{LIFSK}"/>
+										</template>
+									</Column>
+									<Column width="auto" filterProperty="SMENR" defaultFilterOperator="EQ" sortProperty="SMENR" tooltip="Base Unit Of Measure" visible="false">
+										<m:Label text="{i18n>uomTitle}"/>
+										<template>
+											<m:Text text="{SMENR}"/>
+										</template>
+									</Column>
+									<Column width="auto" filterProperty="NETWR" defaultFilterOperator="EQ" sortProperty="NETWR" tooltip="Net Value">
+										<m:Label text="{i18n>nvTitle}"/>
+										<template>
+											<m:Text text="{NETWR}"/>
+										</template>
+									</Column>
+									<Column width="auto" filterProperty="VKORG" defaultFilterOperator="EQ" sortProperty="VKORG" tooltip="Sales Organization" visible="false">
+										<m:Label text="{i18n>salorgTitle}"/>
+										<template>
+											<m:Text text="{VKORG}"/>
+										</template>
+									</Column>
+									<Column width="auto" filterProperty="VKBUR" defaultFilterOperator="EQ" sortProperty="VKBUR" tooltip="Sales Office" visible="false">
+										<m:Label text="{i18n>soTitle}"/>
+										<template>
+											<m:Text text="{VKBUR}"/>
+										</template>
+									</Column>
+									<Column width="auto" filterProperty="EMP_RES" defaultFilterOperator="EQ" sortProperty="EMP_RES" tooltip="Employee Responsible ID" visible="false">
+										<m:Label text="{i18n>empresidTitle}"/>
+										<template>
+											<m:Text text="{EMP_RES}"/>
+										</template>
+									</Column>
+								</columns>
+							</Table>
+						</m:content>
+					</m:ScrollContainer>
+				</m:pages>
+			</m:NavContainer>
+		</tnt:mainContents>
+	</tnt:ToolPage>
+</mvc:View>

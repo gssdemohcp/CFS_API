@@ -1,0 +1,166 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="generated.app.controller.14819016979836433_S3" xmlns:m="sap.m" xmlns="sap.ui.table"
+	xmlns:c="sap.ui.core" xmlns:tnt="sap.tnt">
+	<tnt:ToolPage id="toolPage">
+		<tnt:header>
+			<tnt:ToolHeader>
+				<m:Button id="sideNavigationToggleButton" icon="sap-icon://menu2" type="Transparent" press="onSideNavButtonPress">
+					<m:layoutData>
+						<m:OverflowToolbarLayoutData priority="NeverOverflow"/>
+					</m:layoutData>
+				</m:Button>
+				<m:Button icon="sap-icon://arrow-left" tooltip="Back To Customer" press="handleBackPress"/>
+				<m:ToolbarSpacer width="338px"/>
+				<m:Image src='/webapp/image/logo.png'/>
+				<m:Text text="{i18n>SalesDocPage}"/>
+				<tnt:ToolHeaderUtilitySeparator/>
+				<m:ToolbarSpacer>
+					<m:layoutData>
+						<m:OverflowToolbarLayoutData priority="NeverOverflow" minWidth="20px"/>
+					</m:layoutData>
+				</m:ToolbarSpacer>
+				<m:Image src='/webapp/image/Pdf.jpg' tooltip="Click for PDF View" press="handlePdf"/>	
+				<m:Button icon="sap-icon://log" tooltip="Logoff" class="logoff" press="handleLogoffPress"/>
+				<m:Button text="Alan Smith" type="Transparent">
+					<m:layoutData>
+						<m:OverflowToolbarLayoutData priority="NeverOverflow"/>
+					</m:layoutData>
+				</m:Button>
+			</tnt:ToolHeader>
+		</tnt:header>
+		<tnt:sideContent>
+			<tnt:SideNavigation expanded="false" itemSelect="onItemSelect" class="side-navigation-demo">
+				<tnt:NavigationList>
+					<tnt:NavigationListItem text="{i18n>homePage}" expanded='true' icon="sap-icon://bbyd-dashboard" select="_onStandardTilePress3"></tnt:NavigationListItem>
+					<tnt:NavigationListItem text="{i18n>Last10Page}" icon="sap-icon://sales-document" select="_onStandardTilePress"></tnt:NavigationListItem>
+					<tnt:NavigationListItem text="{i18n>OTPage}" icon="sap-icon://order-status" select="_onStandardTilePress1"></tnt:NavigationListItem>
+					<!--<tnt:NavigationListItem text="{i18n>SOPage}" icon="sap-icon://sales-order" select="salesOrder"></tnt:NavigationListItem>-->
+					<tnt:NavigationListItem text="{i18n>OQPage}" icon="sap-icon://sales-quote" select="_onStandardTilePress5"></tnt:NavigationListItem>
+					<tnt:NavigationListItem text="{i18n>SalesDocPage}" icon="sap-icon://inspection" select="_onStandardTilePress2"></tnt:NavigationListItem>
+					<tnt:NavigationListItem text="{i18n>DeliveryPage}" icon="sap-icon://shipping-status" select="_onStandardTilePress6"></tnt:NavigationListItem>
+					<tnt:NavigationListItem text="{i18n>BillingDocPage}" icon="sap-icon://sales-order" select="_onStandardTilePress9"></tnt:NavigationListItem>
+					<tnt:NavigationListItem text="{i18n>OBDPage}" icon="sap-icon://employee-approvals" select="_onStandardTilePress10"></tnt:NavigationListItem>
+					<tnt:NavigationListItem text="{i18n>SalesDocBillPage}" icon="sap-icon://employee-rejections" select="_onStandardTilePress8"></tnt:NavigationListItem>
+					<tnt:NavigationListItem text="{i18n>contactPage}" icon="sap-icon://customer-and-contacts" select="_onStandardTilePress7"></tnt:NavigationListItem>
+				</tnt:NavigationList>
+			</tnt:SideNavigation>
+		</tnt:sideContent>
+		<tnt:mainContents>
+			<m:NavContainer id="pageContainer">
+				<m:pages>
+					<m:ScrollContainer id="root1" horizontal="false" vertical="true" height="100%">
+						<m:HBox>
+							<m:VBox>
+								<m:Image class="sapUiTinyMarginTopBottom sapUiTinyMarginBegin" src="/webapp/image/cust.png"/>
+							</m:VBox>
+							<m:VBox>
+								<m:Text class="sapUiTinyMarginTopBottom sapUiTinyMarginBegin" text="Classification Number:06 Industry:MBAU" state=""/>
+								<m:Text class="sapUiTinyMarginBottom sapUiTinyMarginBegin" text="Key Figure's Annual Sales: 0,00 in 0000" state=""/>
+							</m:VBox>
+							<m:VBox>
+								<m:Text class="address sapUiTinyMarginTopBottom" id="Address" title=""
+									text="House No/Street:{/AddressSet/0/Stras} City:{/AddressSet/0/Ort01}"/>
+								<m:Text class="address1 sapUiTinyMarginBottom" id="Address1" title="" text="Region:{/AddressSet/0/Regio} Postal Code:{/AddressSet/0/Pstlz}"/>
+							</m:VBox>
+						</m:HBox>
+						<m:content>
+							<Table id="table" rows="{/salesDocumentSearchSet}" selectionMode="Single" mode="None" visibleRowCount="{/salesDocumentSearchSet/length}"
+								inset="false" ariaLabelledBy="title">
+								<toolbar>
+									<m:Toolbar>
+										<m:content>
+											<m:Title id="title"/>
+											<m:ToolbarSpacer/>
+											<m:Button id="column" icon="sap-icon://action-settings" tooltip="show/hide columns" press="getcolumn">
+												<m:customData>
+													<c:CustomData key="multi" value="true"/>
+													<c:CustomData key="remember" value="true"/>
+												</m:customData>
+											</m:Button>
+											<m:Button icon="sap-icon://complete" tooltip="Show Sales Doc Type of 'Standard Order' only" press="getTAonly"/>
+											<m:Button icon="sap-icon://decline" tooltip="clear selection/sort/filter" press="clearSelection"/>
+											<m:SearchField id="searchField" placeholder="Sales Document" value="{ui>/globalFilter}" search="filterGlobally" width="16rem"/>
+										</m:content>
+									</m:Toolbar>
+								</toolbar>
+								<columns>
+									<Column width="auto" filterProperty="Erdat" sortProperty="Erdat" tooltip="Created On">
+										<m:Label text="{i18n>createddatecolumnTitle}"/>
+										<template>
+											<m:Text text="{path: 'Erdat', formatter: '.formatDate'}"/>
+										</template>
+									</Column>
+									<Column width="auto" sortProperty="Vbeln" tooltip="Sales Document">
+										<m:Label text="ID"/>
+										<template>
+											<m:Text text="{Vbeln}"/>
+										</template>
+									</Column>
+									<Column width="auto" sortProperty="Auart" tooltip="Document Type">
+										<m:Label text="{i18n>SDtypeTitle}"/>
+										<template>
+											<m:Text text="{Auart}"/>
+										</template>
+									</Column>
+									<Column width="auto" sortProperty="Kunnr" filterProperty="Kunnr" tooltip="Sold To Party ID" visible="false">
+										<m:Label text="{i18n>stpidcolumnTitle}"/>
+										<template>
+											<m:Text text="{Kunnr}"/>
+										</template>
+									</Column>
+									<Column width="auto" filterProperty="Name1" sortProperty="Name1" tooltip="Sold To Party" visible="false">
+										<m:Label text="{i18n>stpnameTitle}"/>
+										<template>
+											<m:Text text="{Name1}"/>
+										</template>
+									</Column>
+									<Column width="auto" filterProperty="Cmgst" sortProperty="Cmgst" tooltip="Credit Status">
+										<m:Label text="{i18n>creditTitle}"/>
+										<template>
+											<m:Text text="{Cmgst}"/>
+										</template>
+									</Column>
+									<Column width="auto" filterProperty="Gbstk" sortProperty="Gbstk" tooltip="Overall Status ID" visible="false">
+										<m:Label text="{i18n>ovstatusTitle}"/>
+										<template>
+											<m:Text text="{Gbstk}"/>
+										</template>
+									</Column>
+									<Column width="auto" filterProperty="Netwr" sortProperty="Netwr" tooltip="Net Value">
+										<m:Label text="{i18n>nvTitle}"/>
+										<template>
+											<m:Text text="{Netwr}"/>
+										</template>
+									</Column>
+									<Column width="auto" filterProperty="EmpRes" sortProperty="EmpRes" tooltip="Employee Responsible" visible="false">
+										<m:Label text="{i18n>empresidTitle}"/>
+										<template>
+											<m:Text text="{EmpRes}"/>
+										</template>
+									</Column>
+									<Column width="auto" filterProperty="Vkbur" sortProperty="Vkbur" tooltip="Sales Office" visible="false">
+										<m:Label text="{i18n>soTitle}"/>
+										<template>
+											<m:Text text="{Vkbur}"/>
+										</template>
+									</Column>
+									<Column width="auto" filterProperty="Vkorg" sortProperty="Vkorg" tooltip="Sales Organization" visible="false">
+										<m:Label text="{i18n>salorgTitle}"/>
+										<template>
+											<m:Text text="{Vkorg}"/>
+										</template>
+									</Column>
+									<Column width="auto" filterProperty="Waerk" sortProperty="Waerk" tooltip="Document Currency" visible="false">
+										<m:Label text="{i18n>currencyTitle}"/>
+										<template>
+											<m:Text text="{Waerk}"/>
+										</template>
+									</Column>
+								</columns>
+							</Table>
+						</m:content>
+					</m:ScrollContainer>
+				</m:pages>
+			</m:NavContainer>
+		</tnt:mainContents>
+	</tnt:ToolPage>
+</mvc:View>

@@ -1,0 +1,47 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:smartForm="sap.ui.comp.smartform" xmlns:smartField="sap.ui.comp.smartfield" >
+	<Popover showHeader="false" contentWidth="25%" contentHeight="50%" placement="Horizontal" >
+		<NavContainer id="navCust">
+			<Page title="App Details">
+				<content>
+					<f:Form id="CustomerForm" editable="false" class="isReadonly">
+						<f:layout>
+							<f:ResponsiveGridLayout labelSpanL="2" labelSpanM="2" emptySpanL="0" emptySpanM="0" columnsL="0" columnsM="0"/>
+						</f:layout>
+						<f:formContainers>
+							<f:FormContainer>
+								<f:formElements>
+									<f:FormElement label=" App Name">
+										<f:fields>
+											<Text id="appname" text="Customer Fact Sheet"/>
+										</f:fields>
+									</f:FormElement>
+									<f:FormElement label="Version">
+										<f:fields>
+											<Text text="5.0"/>
+										</f:fields>
+									</f:FormElement>
+									<f:FormElement label="Supported Processors">
+										<f:fields>
+											<Text text="x64, x86"/>
+										</f:fields>
+									</f:FormElement>
+									<f:FormElement label="Preferred Screen Orientation">
+										<f:fields>
+											<Text text="Landscape" id="screen"/>
+										</f:fields>
+									</f:FormElement>
+									<f:FormElement label="Copyright">
+										<f:fields>
+											<Text text="© 2017 GlobalSoft Solutions.Inc" id="copyright"/>
+										</f:fields>
+									</f:FormElement>
+								</f:formElements>
+							</f:FormContainer>
+						</f:formContainers>
+					</f:Form>
+				</content>
+			</Page>
+		</NavContainer>
+	</Popover>
+</core:FragmentDefinition>
